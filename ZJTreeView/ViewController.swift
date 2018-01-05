@@ -32,7 +32,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.register(UINib.init(nibName: "TreeItemCell", bundle: nil), forCellReuseIdentifier: "TreeItemCell");
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        self.tableView.estimatedRowHeight = 60;
+        self.tableView.estimatedRowHeight = 52;
+        self.tableView.backgroundColor = UIColor.white;
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 60, 0)
     }
     
@@ -107,7 +108,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60;
+        return 52;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -187,7 +188,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                     self.tableData[i].isexpand = false;
                 }
                 self.tableData.removeSubrange(Range<Int>.init(uncheckedBounds: (lower: indexPathArr[0].row, upper: indexPathArr[indexPathArr.count-1].row+1)))
-                self.tableView.deleteRows(at: indexPathArr, with: UITableViewRowAnimation.fade)
+                self.tableView.deleteRows(at: indexPathArr, with: UITableViewRowAnimation.none)
             }
             self.tableView.endUpdates();
             self.resetTag();

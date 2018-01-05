@@ -15,6 +15,8 @@ class TreeItemCell: UITableViewCell {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var viewLeftCons: NSLayoutConstraint!
     
+    @IBOutlet weak var lineTopImageView: UIImageView!
+    @IBOutlet weak var lineBottomImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +43,26 @@ class TreeItemCell: UITableViewCell {
             }else{
                 actionButton.setImage(UIImage.init(named: "tree_down"), for: UIControlState.normal);
             }
+        }
+        
+        if(itemData.level == 0){
+            self.contentView.backgroundColor = UIColor.init(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 244.0/255);
+            self.lineTopImageView.isHidden = false;
+            if(itemData.childArr == nil){
+                self.lineBottomImageView.isHidden = false;
+            }else{
+                if(itemData.isexpand){
+                    self.lineBottomImageView.isHidden = false;
+                }else{
+                    self.lineBottomImageView.isHidden = true;
+                }
+            }
+            
+            
+        }else{
+            self.contentView.backgroundColor = UIColor.white;
+            self.lineTopImageView.isHidden = true;
+            self.lineBottomImageView.isHidden = true;
         }
         
         viewLeftCons.constant = CGFloat(itemData.level * 20)
