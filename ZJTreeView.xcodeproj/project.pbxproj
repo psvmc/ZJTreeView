@@ -12,6 +12,10 @@
 		02FB339D1FFF243D00AA4881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FB339B1FFF243D00AA4881 /* Main.storyboard */; };
 		02FB339F1FFF243D00AA4881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FB339E1FFF243D00AA4881 /* Assets.xcassets */; };
 		02FB33A21FFF243D00AA4881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FB33A01FFF243D00AA4881 /* LaunchScreen.storyboard */; };
+		02FB33AD1FFF271800AA4881 /* TreeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB33AB1FFF271800AA4881 /* TreeItemCell.swift */; };
+		02FB33AE1FFF271800AA4881 /* TreeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FB33AC1FFF271800AA4881 /* TreeItemCell.xib */; };
+		02FB33B01FFF272E00AA4881 /* TreeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB33AF1FFF272E00AA4881 /* TreeItemModel.swift */; };
+		02FB33B31FFF310000AA4881 /* ZJJsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB33B21FFF310000AA4881 /* ZJJsonUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		02FB339E1FFF243D00AA4881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02FB33A11FFF243D00AA4881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02FB33A31FFF243D00AA4881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FB33AB1FFF271800AA4881 /* TreeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeItemCell.swift; sourceTree = "<group>"; };
+		02FB33AC1FFF271800AA4881 /* TreeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreeItemCell.xib; sourceTree = "<group>"; };
+		02FB33AF1FFF272E00AA4881 /* TreeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeItemModel.swift; sourceTree = "<group>"; };
+		02FB33B21FFF310000AA4881 /* ZJJsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJJsonUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 		02FB33961FFF243D00AA4881 /* ZJTreeView */ = {
 			isa = PBXGroup;
 			children = (
+				02FB33B11FFF30F000AA4881 /* Lib */,
+				02FB33AA1FFF26EE00AA4881 /* Model */,
+				02FB33A91FFF26E100AA4881 /* Cell */,
 				02FB33971FFF243D00AA4881 /* AppDelegate.swift */,
 				02FB33991FFF243D00AA4881 /* ViewController.swift */,
 				02FB339B1FFF243D00AA4881 /* Main.storyboard */,
@@ -62,6 +73,31 @@
 				02FB33A31FFF243D00AA4881 /* Info.plist */,
 			);
 			path = ZJTreeView;
+			sourceTree = "<group>";
+		};
+		02FB33A91FFF26E100AA4881 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				02FB33AB1FFF271800AA4881 /* TreeItemCell.swift */,
+				02FB33AC1FFF271800AA4881 /* TreeItemCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		02FB33AA1FFF26EE00AA4881 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02FB33AF1FFF272E00AA4881 /* TreeItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02FB33B11FFF30F000AA4881 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				02FB33B21FFF310000AA4881 /* ZJJsonUtil.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FB33AE1FFF271800AA4881 /* TreeItemCell.xib in Resources */,
 				02FB33A21FFF243D00AA4881 /* LaunchScreen.storyboard in Resources */,
 				02FB339F1FFF243D00AA4881 /* Assets.xcassets in Resources */,
 				02FB339D1FFF243D00AA4881 /* Main.storyboard in Resources */,
@@ -137,6 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02FB339A1FFF243D00AA4881 /* ViewController.swift in Sources */,
+				02FB33AD1FFF271800AA4881 /* TreeItemCell.swift in Sources */,
+				02FB33B01FFF272E00AA4881 /* TreeItemModel.swift in Sources */,
+				02FB33B31FFF310000AA4881 /* ZJJsonUtil.swift in Sources */,
 				02FB33981FFF243D00AA4881 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
