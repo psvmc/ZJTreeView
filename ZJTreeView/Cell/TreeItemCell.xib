@@ -27,6 +27,9 @@
                                     <constraint firstAttribute="height" constant="1" id="34z-qG-8iL"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frK-O8-JOj">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="57.5"/>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-TC-rwf">
                                 <rect key="frame" x="10" y="18.5" width="20" height="20"/>
                                 <constraints>
@@ -58,9 +61,12 @@
                         <constraints>
                             <constraint firstItem="Qo4-TC-rwf" firstAttribute="centerY" secondItem="AYm-wM-pg9" secondAttribute="centerY" id="0hd-0Y-7Dk"/>
                             <constraint firstAttribute="bottom" secondItem="eWE-Bc-ZUB" secondAttribute="bottom" id="7Do-Jx-Ywv"/>
+                            <constraint firstAttribute="bottom" secondItem="frK-O8-JOj" secondAttribute="bottom" id="8gM-xv-89M"/>
                             <constraint firstItem="eWE-Bc-ZUB" firstAttribute="leading" secondItem="AYm-wM-pg9" secondAttribute="leading" id="BpY-bd-fPp"/>
                             <constraint firstItem="HG8-OK-uTa" firstAttribute="leading" secondItem="Qo4-TC-rwf" secondAttribute="trailing" constant="10" id="FTG-gQ-8sB"/>
                             <constraint firstAttribute="trailing" secondItem="eWE-Bc-ZUB" secondAttribute="trailing" id="INH-na-dI0"/>
+                            <constraint firstItem="frK-O8-JOj" firstAttribute="trailing" secondItem="Qo4-TC-rwf" secondAttribute="trailing" id="Kwa-Z5-Icp"/>
+                            <constraint firstItem="frK-O8-JOj" firstAttribute="leading" secondItem="AYm-wM-pg9" secondAttribute="leading" id="ToT-Cg-MdY"/>
                             <constraint firstAttribute="trailing" secondItem="q9b-Jc-EM9" secondAttribute="trailing" id="Tyn-La-SpL"/>
                             <constraint firstItem="q9b-Jc-EM9" firstAttribute="top" secondItem="AYm-wM-pg9" secondAttribute="top" id="XLn-Ua-t9Q"/>
                             <constraint firstItem="nfX-hF-KD8" firstAttribute="top" secondItem="AYm-wM-pg9" secondAttribute="top" id="bYg-Ol-8Fw"/>
@@ -69,6 +75,7 @@
                             <constraint firstItem="q9b-Jc-EM9" firstAttribute="leading" secondItem="AYm-wM-pg9" secondAttribute="leading" id="lGs-7H-tAS"/>
                             <constraint firstItem="HG8-OK-uTa" firstAttribute="centerY" secondItem="AYm-wM-pg9" secondAttribute="centerY" id="mLl-8j-PLq"/>
                             <constraint firstAttribute="trailing" secondItem="nfX-hF-KD8" secondAttribute="trailing" id="mbl-tq-efV"/>
+                            <constraint firstItem="frK-O8-JOj" firstAttribute="top" secondItem="AYm-wM-pg9" secondAttribute="top" id="mga-H2-Okm"/>
                             <constraint firstItem="nfX-hF-KD8" firstAttribute="leading" secondItem="HG8-OK-uTa" secondAttribute="trailing" id="vyn-6Y-B1k"/>
                         </constraints>
                     </view>
@@ -82,6 +89,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="actionButton" destination="nfX-hF-KD8" id="ZoQ-l2-wrG"/>
+                <outlet property="checkButton" destination="frK-O8-JOj" id="UsH-PD-hGI"/>
                 <outlet property="checkImageView" destination="Qo4-TC-rwf" id="9pF-W3-TaN"/>
                 <outlet property="lineBottomImageView" destination="eWE-Bc-ZUB" id="Qbd-LB-8U0"/>
                 <outlet property="lineTopImageView" destination="q9b-Jc-EM9" id="n5i-w2-Xyo"/>

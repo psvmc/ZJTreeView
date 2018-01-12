@@ -13,6 +13,7 @@ class TreeItemCell: UITableViewCell {
     @IBOutlet weak var checkImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var viewLeftCons: NSLayoutConstraint!
     
     @IBOutlet weak var lineTopImageView: UIImageView!

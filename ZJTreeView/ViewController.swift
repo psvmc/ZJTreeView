@@ -116,7 +116,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let  cell = tableView.dequeueReusableCell(withIdentifier: "TreeItemCell", for: indexPath) as! TreeItemCell;
         cell.selectionStyle = .none
         cell.setItemData(itemData: itemData);
-        cell.actionButton.addTarget(self, action: #selector(actionButtonClick(button:)), for: UIControlEvents.touchUpInside)
+        cell.checkButton.addTarget(self, action: #selector(checkButtonClick(button:)), for: UIControlEvents.touchUpInside)
         
         let tagNum = indexPath.section*1000000 + indexPath.row;
         cell.actionButton.tag = tagNum;
@@ -126,27 +126,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let itemData = self.tableData[indexPath.row];
-        itemData.isselect = !itemData.isselect;
-        self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-        if(itemData.isselect){
-            self.checkItem(itemData: itemData);
-        }else{
-            self.uncheckItem(itemData: itemData)
+        if(itemData.childArr != nil){
+            if(!itemData.isexpand){
+                self.expandTableView(indexPath: indexPath);
+            }else{
+                self.foldTableView(indexPath: indexPath);
+            }
         }
-        self.tableView.reloadData()
     }
     
     
-    @objc func actionButtonClick(button:UIButton){
+    @objc func checkButtonClick(button:UIButton){
         if let indexPath = self.buttonPars[button.tag]{
             let itemData = self.tableData[indexPath.row];
-            if(itemData.childArr != nil){
-                if(!itemData.isexpand){
-                    self.expandTableView(indexPath: indexPath);
-                }else{
-                    self.foldTableView(indexPath: indexPath);
-                }
+            itemData.isselect = !itemData.isselect;
+            self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            if(itemData.isselect){
+                self.checkItem(itemData: itemData);
+            }else{
+                self.uncheckItem(itemData: itemData)
             }
+            self.tableView.reloadData()
         }
     }
     
