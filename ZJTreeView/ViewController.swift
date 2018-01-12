@@ -119,7 +119,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.checkButton.addTarget(self, action: #selector(checkButtonClick(button:)), for: UIControlEvents.touchUpInside)
         
         let tagNum = indexPath.section*1000000 + indexPath.row;
-        cell.actionButton.tag = tagNum;
+        cell.checkButton.tag = tagNum;
         self.buttonPars[tagNum] = indexPath;
         return cell;
     }
@@ -270,7 +270,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let indexPath = IndexPath.init(row: i, section: 0);
             if let itemCell = self.tableView.cellForRow(at: indexPath) as? TreeItemCell{
                 let tagNum = indexPath.section*1000000 + indexPath.row;
-                itemCell.actionButton.tag = tagNum;
+                itemCell.checkButton.tag = tagNum;
                 self.buttonPars[tagNum] = indexPath;
             }
         }
