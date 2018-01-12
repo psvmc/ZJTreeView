@@ -88,7 +88,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="actionButton" destination="nfX-hF-KD8" id="ZoQ-l2-wrG"/>
+                <outlet property="actionButton" destination="nfX-hF-KD8" id="33B-Wx-Be8"/>
                 <outlet property="checkButton" destination="frK-O8-JOj" id="UsH-PD-hGI"/>
                 <outlet property="checkImageView" destination="Qo4-TC-rwf" id="9pF-W3-TaN"/>
                 <outlet property="lineBottomImageView" destination="eWE-Bc-ZUB" id="Qbd-LB-8U0"/>
